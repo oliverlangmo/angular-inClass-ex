@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app= 'myApp'>
   <head>
     <meta charset="utf-8">
     <title>in class angular example</title>
     <script src="/vendors/angular.min.js" charset="utf-8"></script>
-    <script src="/scripts/app.js" charset="utf-8"></script>
+    <script src="/scripts/FE-app.js" charset="utf-8"></script>
   </head>
   <body>
     <h2>Hello</h2>
-    <input type="text" ng-model="brainiacBinder" placeholder="enter stuff" name="name" value="">
-
-    <p>Two way bind output: {{brainiacBinder}}</p>
+    <div ng-controller='pinkyController'>
+          <input type="text" ng-model="brainiacBinder" placeholder="enter stuff" name="name" value="">
+          <input type="text" ng-model="brainiacBinder2" placeholder="enter stuff again" name="name" value="">
+          <p>Two way bind output: {{brainiacBinder}}</p>
+          <button type="button" name="button" ng-click='checkInput();'>Check Input</button>
+   </div>
   </body>
 </html>
